@@ -16,6 +16,18 @@ python -m venv env
 
 ## Database
 
+```sh
+from django.db import models
+class Category(models.Model):
+    name = models.CharField(max_length=100)
+class Product(models.Model):
+    name = models.CharField(max_length=50)
+    url_image = models.CharField(max_length=200)
+    price = models.FloatField()
+    discount = models.IntegerField()
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+```
+
 ## Api Rest
 ### Get all products
 ```sh
@@ -24,6 +36,7 @@ http://localhost:8000/api/products/
 
 ## Demo
 the Api REST was deployed to [Heroku](https://dashboard.heroku.com/).
+
 [Live Demo - Api REST](https://api-rest-bsale.herokuapp.com/api/products/)
 
 
