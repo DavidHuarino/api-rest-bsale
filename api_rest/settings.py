@@ -56,6 +56,7 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:5500',
+    'https://tender-allen-1d8322.netlify.app'
 )
 
 ROOT_URLCONF = 'api_rest.urls'
