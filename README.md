@@ -17,12 +17,12 @@ python -m venv env
 ## Database
 Django application models is shown below.
 
-### Model Category
+### Category Model
 ```sh
 class Category(models.Model):
     name = models.CharField(max_length=100)
 ```
-### Model Product
+### Product Model
 ```sh
 class Product(models.Model):
     name = models.CharField(max_length=50)
