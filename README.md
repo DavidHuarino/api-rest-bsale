@@ -15,11 +15,15 @@ python -m venv env
 ```
 
 ## Database
+Django application models is shown below.
 
+### Model Category
 ```sh
-from django.db import models
 class Category(models.Model):
     name = models.CharField(max_length=100)
+```
+### Model Product
+```sh
 class Product(models.Model):
     name = models.CharField(max_length=50)
     url_image = models.CharField(max_length=200)
@@ -29,9 +33,26 @@ class Product(models.Model):
 ```
 
 ## Api Rest
+The REST API to the example app is described below.
+
 ### Get all products
 ```sh
 http://localhost:8000/api/products/
+```
+
+### Get products by product name
+```sh
+http://localhost:8000/api/products?search=<name>
+```
+
+### Get products by page
+```sh
+http://localhost:8000/api/products?page=<page>
+```
+
+### Get products by category
+```sh
+http://localhost:8000/api/products?category=<category>
 ```
 
 ## Demo
